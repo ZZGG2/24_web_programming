@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팬클럽 회원가입</title>
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap" rel="stylesheet">
+    <!-- 배대석/60212555/웹프로그래밍 과제#3 -->
+</head>
+<body>
+    <div class="grid-container">
+        <div id="header">
+            <header>
+                <div class="top-right">
+                    <input type="button" value="로그인">
+                    <a href="team.html">
+                        <input type="button" value="뒤로가기">
+                    </a>
+                </div>
+                <img src="logo.png" width="100px" alt="맨시티 로고">
+                <h2>맨체스터 시티 공식 팬클럽</h2>
+                <p>맨체스터 시티 팀을 좋아하는 사람이라면 누구나! 이 사이트는 맨체스터 시티
+                    팬이라면 누구나 가입할 수 있습니다. <strong>회원가입</strong>을 통해 마음
+                    맞는 사람들끼리 소통하세요!
+                </p>
+            </header>
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="shop">Shop</a>
+        </nav>
+        <div id="sidebar"></div>
+        <div id="content">
+            <main>
+                <h2>회원가입</h2>
+                <form id="signupForm">
+                    <fieldset>
+                        <legend><strong>개인정보를 입력해주세요 (*는 필수 항목입니다)</strong></legend>
+                        <p>
+                            <label for="username">아이디(*):
+                                <input type="text" id="username" placeholder="아이디" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="password">비밀번호(*):
+                                <input type="password" id="password" placeholder="비밀번호" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="email">이메일(*):
+                                <input type="text" id="email" placeholder="이메일" required>
+                                <select name="emailDomain" id="emailDomain" required>
+                                    <option value="">선택하세요</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="daum.net">daum.net</option>
+                                    <option value="yahoo.com">yahoo.com</option>
+                                </select>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="tel">전화번호(*):
+                                <input type="tel" id="tel" placeholder="전화번호" required>
+                                <input type="button" value="인증번호 받기" id="sendCode">
+                            </label>
+                        </p>
+                        <p>
+                            <label for="verification">인증번호 입력:
+                                <input type="number" id="verification" placeholder="인증번호를 입력하세요" required>
+                                <input type="button" value="인증하기" id="verifyCode">
+                            </label>
+                        </p>
+                        <p>
+                            <label for="lastName">성(*):
+                                <input type="text" id="lastName" placeholder="성" required>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="firstName">이름(*):
+                                <input type="text" id="firstName" placeholder="이름" required>
+                            </label>
+                        </p>
+                        <p>생년월일(*):<br>
+                            <input type="date" id="birthDate" required>
+                        </p>
+                        <p>성별(*):
+                            <label><input type="radio" name="gender" value="male" required>남자</label>
+                            <label><input type="radio" name="gender" value="female" required>여자</label>
+                        </p>
+                        <p>
+                            <label for="reason">맨체스터 시티를 좋아하게 된 계기가 뭔가요?<br>
+                                <textarea id="reason" cols="50" rows="2" placeholder="자유롭게 작성해주세요."></textarea>
+                            </label>
+                        </p>
+                        <p>
+                            <label for="activities">팬클럽에서 하고싶은 활동은 무엇이 있나요?<br>
+                                <textarea id="activities" cols="50" rows="2" placeholder="자유롭게 작성해주세요."></textarea>
+                            </label>
+                        </p>
+                        <input type="submit" value="제출">
+                        <input type="reset" value="취소">
+                    </fieldset>
+                </form>                
+            </main>
+        </div>
+        <div id="footer">
+            <footer>
+                배대석/60212555/웹프로그래밍 과제#3
+            </footer>
+        </div>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

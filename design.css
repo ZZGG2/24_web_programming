@@ -1,0 +1,163 @@
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "sidebar content content"
+        "footer footer footer";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+}
+#header {
+    grid-area: header;
+    box-sizing: border-box;
+    background-color: rgb(135, 206, 235);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: black;
+    box-sizing: border-box;
+}
+#sidebar {
+    grid-area: sidebar;
+    background-color: rgb(135, 206, 235);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+#content {
+    grid-area: content;
+    background-color: rgb(135, 206, 235);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+#footer {
+    grid-area: footer;
+    background-color: rgb(135, 206, 235);
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+#header h1,
+#header h2,
+#header p {
+    margin: 0;
+    padding: 0;
+}
+#header h2 {
+    font-family: 'Gasoek One', sans-serif;
+    font-weight: 400;
+}
+#header > img{
+    transition: all 1s 1s;
+}
+#header > img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+.top-right {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.top-right input {
+    margin-left: 5px;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    border: 2px solid black;
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: rgb(135, 206, 235);
+}
+
+nav > a[href]{
+    text-decoration: none;
+    color: black;
+}
+
+#sidebar a {
+    display: block;
+    text-align: center;
+}
+
+#sidebar a:visited {
+    color: blueviolet;
+}
+
+#sidebar a:hover::before {
+    content: "⚽︎";
+}
+
+#sidebar li:nth-of-type(even) {
+    color: blue;
+}
+
+#sidebar li:nth-of-type(odd) {
+    color: rgb(0, 0, 0);
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border: 2px solid black;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+table {
+    border-collapse: collapse;
+    margin: 10 auto;
+    width: 100%;
+}
+
+th, td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 3px;
+}
+
+input:focus {
+    background: white;
+}
+
+
+footer {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+}
+@media all and (max-width: 900px){
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "nav"
+        "sidebar"
+        "content"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
